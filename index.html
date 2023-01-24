@@ -1,14 +1,178 @@
 <!DOCTYPE html>
-<html> 
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>hw-02</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-    <meta charset=utf-8/>
-</head>
+  <body>
+    <div id="data-abstraction">
+      <div class="info">
+        <h1>Dataset Types</h1>
+        <table>
+          <tr>
+            <th>Data</th>
+            <th>Link</th>
+            <th>Dataset Type</th>
+          </tr>
+          <tr>
+            <td>UFO</td>
+            <td><a href="./data/UFO.csv">Link</a></td>
+            <td>Table</td>
+          </tr>
+          <tr>
+            <td>Airports</td>
+            <td><a href="./data/Airports.csv">Link</a></td>
+            <td>Table</td>
+          </tr>
+          <tr>
+            <td>Google-Web</td>
+            <td><a href="./data/Google-Web.txt">Link</a></td>
+            <!--We chose to specify this as a network -->
+            <td>Network</td>
+          </tr>
+        </table>
+        <div class="info">
+          <h1>Data Types</h1>
+          <h2>UFO</h2>
+          <ul>
+            <li>Row data type: Items</li>
+            <li>Column: datetime</li>
 
+            <!--We went with this data abstraction as we believe you can order by dates and that there is a chronology to the times, making it sequential -->
+            <ul>
+              <li>Ordered Ordinal Sequential</li>
+            </ul>
+            <li>Column:City</li>
+            <!--We went with this data abstraction as there is no order to city names, yet the data can still be categorized by city-->
+            <ul>
+              <li>Categorical</li>
+            </ul>
+            <li>Column:State</li>
+            <!--Follows same logic as City-->
+            <ul>
+              <li>Categorical</li>
+            </ul>
+            <li>Column:Country</li>
+            <!--Follows same logic as City-->
+            <ul>
+              <li>Categorical</li>
+            </ul>
+            <li>Column:Shape</li>
+            <!--Follows same logic as City-->
+            <ul>
+              <li>Categorical</li>
+            </ul>
+            <li>Column:Duration</li>
+            <!--Durations of time are continuous, numerically oriented, and can be sorted-->
+            <ul>
+              <li>Ordered Quantatative Sequential</li>
+            </ul>
+          </ul>
+          <h2>Airports</h2>
+          <ul>
+            <li>Row Data Type: Items</li>
+            <li>Column: Airport_Name</li>
+            <ul>
+              <li>Categorical</li>
+            </ul>
 
-<body>
+            <ul>
+              <li>Categorical</li>
+            </ul>
+            <li>Column: Latitude</li>
+            <ul>
+              <li>Position</li>
+            </ul>
+            <li>Column: Longitude</li>
+            <ul>
+              <li>Position</li>
+            </ul>
+          </ul>
+          <h2>Google-Web</h2>
+          <ul>
+            <!--We said link as the data type because the rows represent a relationship ie connection between 2 nodes-->
+            <li>Row data type: Link</li>
+            <li>Column data type: FromNodeID</li>
+            <!--We specified this to be an item as it numerically represents a node, a discrete entity -->
+            <ul>
+              <li>Item</li>
+            </ul>
+            <li>Column data type: ToNodeID</li>
+            <!--We specified this to be an item as it numerically represents a node, a discrete entity -->
+            <ul>
+              <li>Item</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
 
+    <div id="task-abstraction">
+      <h1>Task Abstraction</h1>
+      <div class="columns">
+        <div>
+          <img src="./img/vis1.png" />
+          <!--We chose this high level abstraction as we are examining this graph without any specific goal in mind-->
+          <p>High Level: Consume Discover</p>
+          <!--We chose this as we can see that 3 dots are highlighted on the graph and we just need to discover their specific values-->
+          <p>Medium Level: Lookup</p>
+          <!--We chose this as we sought to compare the 3 highlighted values-->
+          <p>Low Level: Compare</p>
+          <!--This graph represents a large distribution of data and the selected points appear outside of the normal distribution  -->
+          <p>Target: Attributes: Extreme</p>
+        </div>
 
-</body>
+        <div>
+          <img src="./img/vis2.png" />
+          <!--We chose this asthere is a clear statement being made about this chart-->
+          <p>High Level: Consume Present</p>
+          <!--We can physically see the sections of the graph that contain important info but we don't know what specific info were looking for -->
+          <p>Medium Level: Browse</p>
+          <!--We chose this as the same measurements are being contrasted from 2 different locations-->
+          <p>Low Level: Compare</p>
+          <!--The graph represents higher than average temperatures, so we want to notice if these extremes trend upward overtime-->
+          <p>Target: All data: trends</p>
+        </div>
+      </div>
+    </div>
+    <!--Flexbox row of five shapes that responds dynamically to resizing the page-->
+    <div id="decoration">
+      <div class="container">
+        <svg>
+          <circle cx="50%" cy="50% " r="45" />
+        </svg>
+        <svg>
+          <rect width="100" height="100" />
+        </svg>
+        <svg>
+          <circle cx="50%" cy="50% " r="45" />
+        </svg>
+        <svg>
+          <rect width="100" height="100" />
+        </svg>
+        <svg>
+          <circle cx="50%" cy="50% " r="45" />
+        </svg>
+      </div>
+    </div>
 
+    <!--Acknowledgements header with list of sources-->
+    <h3>Acknowledgements</h3>
+    <div>
+      <ul>
+        <li>https://www.w3schools.com/css/css_border.asp</li>
+        <li>
+          https://css-tricks.com/the-many-ways-to-change-an-svg-fill-on-hover-and-when-to-use-them/
+        </li>
+        <li>
+          https://stackoverflow.com/questions/14751178/adding-border-to-svg-image
+        </li>
+      </ul>
+    </div>
+    <ul>
+      <li></li>
+    </ul>
+  </body>
 </html>

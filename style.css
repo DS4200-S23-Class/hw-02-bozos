@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+td {
+  border-bottom: 1px solid black;
+}
+th {
+  background-color: blue;
+}
+.columns {
+  display: flex;
+}
+
+p {
+  color: blue;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* style for rect and circle row */
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* size for SVG boxes */
+svg {
+  width: 100px;
+  height: 100px;
+}
+
+/* style for unhovered circles */
+circle {
+  opacity: 50%;
+  fill: blue;
+}
+
+/* style for unhovered rects */
+rect {
+  stroke: black;
+  stroke-width: 10px;
+  fill: green;
+}
+
+/* style for hovered circles */
+circle:hover {
+  stroke: red;
+  stroke-width: 10px;
+}
+
+/* style for hovered rects */
+rect:hover {
+  fill: orange;
+}
+
+/* style for Acknowledgement footer */
+h3 {
+  text-align: center;
+}
